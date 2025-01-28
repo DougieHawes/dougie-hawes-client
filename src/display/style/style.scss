@@ -1,0 +1,65 @@
+@import "./variables";
+
+* {
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  font-family: $font2;
+  list-style: none;
+  margin: 0 auto;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #128482;
+  border-radius: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font1;
+  font-weight: 100;
+}
+
+.app {
+  background-blend-mode: screen;
+  background-position: center;
+  background-size: size;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: $padding1;
+}
+
+.app-lightmode {
+  background-image: url("../media/images/layout/desk-background-light.jpg");
+  background-color: rgba($color: $colour1, $alpha: 0.7);
+
+  * {
+    border-color: $colour2;
+    color: $colour2;
+  }
+}
+
+.app-darkmode {
+  background-color: $colour2;
+  * {
+    border-color: $colour1;
+    color: $colour1;
+  }
+}
+
+.form {
+  max-width: 600px;
+}

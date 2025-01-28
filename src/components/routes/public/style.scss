@@ -1,0 +1,132 @@
+@import "../../../display/style/style.scss";
+
+// CONTACT
+.contact-links-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 21px;
+  max-width: 400px;
+  .contact-link {
+    .contact-link-image {
+      width: 70px;
+    }
+  }
+}
+.contact-form-container {
+  margin-top: 21px;
+  max-width: 600px;
+  .contact-form-greet {
+    font-size: 21px;
+    text-align: center;
+  }
+  .contact-form-error-container {
+    color: $colour4;
+    height: 21px;
+    text-align: center;
+  }
+}
+
+// HOME
+.home-links-container {
+  margin: 21px auto 0 auto;
+  text-align: center;
+  .home-link {
+    .home-link-image {
+      margin: 0 7px;
+      width: 70px;
+    }
+  }
+}
+.home-title-container {
+  margin: -14px auto 0 auto;
+  max-width: 600px;
+  .home-title {
+    font-size: 59px;
+    text-align: center;
+    .dougie {
+      color: $colour3;
+      font-family: $font1;
+      margin-right: -7px;
+    }
+    .hawes {
+      color: $colour4;
+      font-family: $font1;
+      margin-left: -7px;
+    }
+  }
+  .home-subtitle {
+    font-size: 29px;
+    text-align: center;
+  }
+}
+.mern-container {
+  display: flex;
+  height: 210px;
+  justify-content: space-around;
+  margin: 21px auto 0 auto;
+  max-width: 300px;
+  .mern-item-container {
+    height: 70px;
+    width: 21%;
+    .mern-item-image {
+      width: 100%;
+    }
+    .mern-item-text {
+      font-size: 70px;
+      margin-top: -14px;
+      text-align: center;
+    }
+  }
+}
+.home-work-samples-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -70px auto 0 auto;
+  max-width: 950px;
+  width: 100%;
+  .home-work-sample {
+    border-width: 2px;
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    .home-work-sample-image {
+      width: 100%;
+    }
+    .home-work-sample-text-container {
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+      .home-work-sample-category {
+        font-family: $font1;
+      }
+      .home-work-sample-category,
+      .home-work-sample-title {
+        color: $colour1;
+        font-size: 42px;
+        opacity: 0;
+        text-align: center;
+        text-shadow: 1px 1px 1px $colour2, 1px -1px 1px $colour2,
+          -1px 1px 1px $colour2, -1px -1px 1px $colour2;
+        transition: 0.6s opacity ease-in-out;
+      }
+    }
+  }
+  .home-work-sample:hover {
+    .home-work-sample-category,
+    .home-work-sample-title {
+      opacity: 1;
+    }
+  }
+}
+
+// SKILLS
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// WORKS
+.work-grid {
+  display: flex;
+  flex-wrap: wrap;
+}

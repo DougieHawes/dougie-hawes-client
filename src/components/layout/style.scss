@@ -1,0 +1,36 @@
+@import "../../display/style/style.scss";
+
+.header {
+  border-bottom-width: 2px;
+  margin-bottom: 2px;
+  max-height: $header-height;
+  min-height: $header-height;
+  overflow: hidden;
+  .header-title-container {
+    .header-title-link {
+      display: grid;
+      grid-template-columns: 42px 250px;
+      .header-title-logo {
+        width: 42px;
+      }
+      .header-title {
+        font-size: 42px;
+        margin-left: 3px;
+        margin-top: -6px;
+        text-align: left;
+      }
+    }
+  }
+  .header-navbar {
+  }
+}
+
+.mode-toggle {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 6px;
+  .mode-toggle-image {
+    width: 35px;
+  }
+}
