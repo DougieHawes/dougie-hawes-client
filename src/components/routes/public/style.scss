@@ -87,6 +87,7 @@
   .home-work-sample {
     border-width: 2px;
     cursor: pointer;
+    margin-bottom: 14px;
     position: relative;
     width: 300px;
     .home-work-sample-image {
@@ -125,8 +126,136 @@
   flex-wrap: wrap;
 }
 
+// SKILL MODAL
+.skill-modal-container {
+  .skill-modal {
+    background-color: $colour1;
+    border-width: 2px;
+    left: 50%;
+    min-height: 420px;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 42px;
+    width: 300px;
+    z-index: 999;
+    .skill-modal-title {
+      color: $colour3;
+      font-size: 42px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .skill-modal-image {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+    }
+    .skill-modal-level {
+      color: $colour4;
+      font-size: 21px;
+      font-weight: bold;
+      margin-top: -7px;
+      text-align: center;
+    }
+    .skill-modal-details {
+      padding: 18px;
+      text-align: justify;
+    }
+    .skill-modal-close {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 21px;
+      position: absolute;
+      right: 12px;
+      top: 6px;
+    }
+  }
+  .skill-modal-background {
+    background-color: rgba($color: $colour2, $alpha: 0.42);
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
 // WORKS
 .work-grid {
   display: flex;
   flex-wrap: wrap;
+}
+.work-item-page {
+  display: flex;
+  flex-wrap: wrap;
+  .work-item-page-column {
+    display: block;
+    height: auto;
+    padding: 0 6px;
+    max-width: 640px;
+    object-fit: cover;
+    width: 100%;
+    .work-item-page-title-container {
+      .work-item-page-title {
+        font-family: $font1;
+        font-size: 42px;
+      }
+      .work-item-page-date {
+        color: $colour4;
+        font-size: 21px;
+        margin-top: -14px;
+        font-weight: 800;
+      }
+      .work-item-skills-array {
+        padding: 6px 2%;
+        .work-item-skills-array-item {
+          color: $colour3;
+          cursor: pointer;
+          font-weight: 800;
+        }
+      }
+    }
+    .work-item-image-container {
+      border-width: 2px;
+      margin-right: 6px;
+      max-height: 400px;
+      overflow: hidden;
+      width: 100%;
+      .work-item-image {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    .work-item-image-scroll-container {
+      display: flex;
+      .work-item-image-scroll-button {
+        background-color: rgba($color: #000000, $alpha: 0);
+        border-width: 2px;
+        font-size: 21px;
+        cursor: pointer;
+        margin: 6px;
+        padding: 6px;
+        width: 100%;
+      }
+    }
+    .work-item-image-thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .work-item-image-thumbnail {
+        border-width: 2px;
+        margin: 2px;
+        width: 140px;
+      }
+    }
+    .work-item-links-container {
+      margin-top: 21px;
+    }
+    .work-item-description-container {
+      padding: 6px 0;
+      text-align: justify;
+    }
+  }
 }

@@ -31,8 +31,8 @@ export const Card1 = ({
   </div>
 );
 
-export const Card2 = ({ image, level, title }) => (
-  <div className="card card2">
+export const Card2 = ({ image, level, onClick, title }) => (
+  <div className="card card2" onClick={onClick}>
     <h3 className="card-title">{title}</h3>
     <img className="card2-image" src={image} alt="" />
     <p className="card2-level">{level}</p>
