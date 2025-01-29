@@ -10,7 +10,7 @@ import { skillsArray } from "./data";
 
 import "./style.scss";
 
-const Skills = () => {
+const Skills = ({ darkmode }) => {
   const [showModal, setShowModal] = useState(false);
   const [modalDetails, setModalDetails] = useState({
     details: "",
@@ -44,6 +44,7 @@ const Skills = () => {
           </div>
           {showModal && (
             <SkillModal
+              darkmode={darkmode}
               details={details}
               image={image}
               level={level}

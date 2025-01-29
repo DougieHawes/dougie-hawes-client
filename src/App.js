@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:blogid" element={<BlogItem />} />
         <Route path="/contact" element={<Contact darkmode={darkmode} />} />
-        <Route path="/skills" element={<Skills />} />
+        <Route path="/skills" element={<Skills darkmode={darkmode} />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/:workid" element={<WorkItem />} />
         <Route path={process.env.REACT_APP_SIGNIN_URL} element={<SignIn />} />

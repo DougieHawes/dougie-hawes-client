@@ -8,7 +8,7 @@
   max-width: 400px;
   .contact-link {
     .contact-link-image {
-      width: 70px;
+      width: 60px;
     }
   }
 }
@@ -129,7 +129,6 @@
 // SKILL MODAL
 .skill-modal-container {
   .skill-modal {
-    background-color: $colour1;
     border-width: 2px;
     left: 50%;
     min-height: 420px;
@@ -168,6 +167,12 @@
       right: 12px;
       top: 6px;
     }
+  }
+  .skill-modal-lightmode {
+    background-color: $colour1;
+  }
+  .skill-modal-darkmode {
+    background-color: $colour2;
   }
   .skill-modal-background {
     background-color: rgba($color: $colour2, $alpha: 0.42);

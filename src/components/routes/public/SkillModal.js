@@ -2,10 +2,14 @@ import expressLogo from "../../../display/media/images/icons/express-logo.png";
 
 import "./style.scss";
 
-const SkillModal = ({ details, image, level, onClick, title }) => {
+const SkillModal = ({ darkmode, details, image, level, onClick, title }) => {
   return (
     <div className="skill-modal-container">
-      <div className="skill-modal">
+      <div
+        className={`skill-modal ${
+          darkmode ? "skill-modal-darkmode" : "skill-modal-lightmode"
+        }`}
+      >
         <h4 className="skill-modal-title">{title}</h4>
         <img className="skill-modal-image" src={image} alt="" />
         <p className="skill-modal-level">{level}</p>

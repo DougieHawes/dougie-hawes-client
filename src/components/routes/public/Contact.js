@@ -8,6 +8,8 @@ import phoneLogoDark from "../../../display/media/images/icons/phone-logo-dark.p
 import phoneLogoLight from "../../../display/media/images/icons/phone-logo-light.png";
 import emailLogoDark from "../../../display/media/images/icons/email-logo-dark.png";
 import emailLogoLight from "../../../display/media/images/icons/email-logo-light.png";
+import cvLogoDark from "../../../display/media/images/icons/cv-logo-dark.png";
+import cvLogoLight from "../../../display/media/images/icons/cv-logo-light.png";
 
 import { Route1 } from "../../utils/routes";
 
@@ -78,6 +80,13 @@ const Contact = ({ darkmode }) => {
               <img
                 className="contact-link-image"
                 src={darkmode ? emailLogoDark : emailLogoLight}
+                alt=""
+              />
+            </a>
+            <a className="contact-link" target="_blank">
+              <img
+                className="contact-link-image"
+                src={darkmode ? cvLogoDark : cvLogoLight}
                 alt=""
               />
             </a>
