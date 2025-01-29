@@ -48,7 +48,10 @@ export const Card3 = ({ date, image, link, text, title }) => (
       <div className="card3-text-container">
         <h3 className="card-title">{title}</h3>
         <p className="card3-date">{date}</p>
-        <p className="card3-text">{text}</p>
+        <p
+          className="card3-text"
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></p>
       </div>
     </div>
   </Link>

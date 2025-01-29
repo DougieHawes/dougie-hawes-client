@@ -1,5 +1,33 @@
 @import "../../../display/style/style.scss";
 
+// BLOG ITEM
+.blog-item {
+  margin-right: 6px;
+  .blog-item-image {
+    margin-left: 50%;
+    margin-top: 21px;
+    max-width: 600px;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  .blog-item-title {
+    color: $colour3;
+    font-size: 42px;
+    text-align: center;
+  }
+  .blog-item-date {
+    color: $colour4;
+    font-size: 21px;
+    font-weight: 800;
+    text-align: center;
+  }
+  .blog-item-text {
+    font-size: 21px;
+    text-align: justify;
+    padding: 21px 2%;
+  }
+}
+
 // CONTACT
 .contact-links-container {
   display: flex;

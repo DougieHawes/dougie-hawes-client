@@ -12,6 +12,10 @@ import WorkItem from "./components/routes/public/WorkItem";
 import Skills from "./components/routes/public/Skills";
 import SignIn from "./components/routes/public/SignIn";
 
+import CreateProduct from "./components/routes/private/CreateWork";
+import Dashboard from "./components/routes/private/Dashboard";
+import CreateBlog from "./components/routes/private/CreateBlog";
+
 import "./display/style/style.scss";
 
 const App = () => {
@@ -29,6 +33,18 @@ const App = () => {
         <Route path="/work" element={<Work />} />
         <Route path="/work/:workid" element={<WorkItem />} />
         <Route path={process.env.REACT_APP_SIGNIN_URL} element={<SignIn />} />
+        <Route
+          path={`${process.env.REACT_APP_SIGNIN_URL}/dashboard`}
+          element={<Dashboard />}
+        />
+        <Route
+          path={`${process.env.REACT_APP_SIGNIN_URL}/create-work`}
+          element={<CreateProduct />}
+        />
+        <Route
+          path={`${process.env.REACT_APP_SIGNIN_URL}/create-blog`}
+          element={<CreateBlog />}
+        />
       </Routes>
     </div>
   );

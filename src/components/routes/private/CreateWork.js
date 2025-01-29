@@ -1,11 +1,16 @@
+import { useState } from "react";
+
 import { Route2 } from "../../utils/routes";
+
+import { Button1 } from "../../utils/buttons";
+import { Input1 } from "../../utils/inputs";
 
 import "./style.scss";
 
-const CreateProduct = () => {
-  const [formData, setFromData] = useState({ email: "", password: "" });
+const CreateWork = () => {
+  const [formData, setFromData] = useState({ title: "" });
 
-  const { email, password } = formData;
+  const { title } = formData;
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,7 +26,7 @@ const CreateProduct = () => {
       content={
         <>
           <form className="form">
-            <Input1 value={password} onChange={handleChange} />
+            <Input1 value={title} onChange={handleChange} />
             <Button1 onClick={handleSubmit} />
           </form>
         </>
@@ -30,4 +35,4 @@ const CreateProduct = () => {
   );
 };
 
-export default CreateProduct;
+export default CreateWork;
