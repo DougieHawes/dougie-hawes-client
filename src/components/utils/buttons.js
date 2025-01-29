@@ -6,14 +6,14 @@ export const Button1 = ({ onClick, text }) => (
   </button>
 );
 
-export const Button2 = ({ text, to }) => (
+export const Button2 = ({ to }) => (
   <a className="button button2" href={to} target="_blank">
-    {text}
+    VIEW SITE
   </a>
 );
 
-export const Button3 = ({ text, to }) => (
+export const Button3 = ({ to }) => (
   <a className="button button3" href={to} target="_blank">
-    {text}
+    VIEW CODE
   </a>
 );

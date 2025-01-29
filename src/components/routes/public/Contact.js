@@ -4,10 +4,10 @@ import githubLogoDark from "../../../display/media/images/icons/github-logo-dark
 import githubLogoLight from "../../../display/media/images/icons/github-logo-light.svg";
 import linkedinLogoDark from "../../../display/media/images/icons/linkedin-logo-dark.svg";
 import linkedinLogoLight from "../../../display/media/images/icons/linkedin-logo-light.svg";
-import phoneLogoDark from "../../../display/media/images/icons/phone-logo-dark.svg";
-import phoneLogoLight from "../../../display/media/images/icons/phone-logo-light.svg";
-import emailLogoDark from "../../../display/media/images/icons/email-logo-dark.svg";
-import emailLogoLight from "../../../display/media/images/icons/email-logo-light.svg";
+import phoneLogoDark from "../../../display/media/images/icons/phone-logo-dark.png";
+import phoneLogoLight from "../../../display/media/images/icons/phone-logo-light.png";
+import emailLogoDark from "../../../display/media/images/icons/email-logo-dark.png";
+import emailLogoLight from "../../../display/media/images/icons/email-logo-light.png";
 
 import { Route1 } from "../../utils/routes";
 

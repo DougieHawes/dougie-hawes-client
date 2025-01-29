@@ -14,7 +14,9 @@ export const Card1 = ({
 }) => (
   <div className="card card1">
     <Link to={`/work/${link}`}>
-      <img className="card1-image" src={image} alt="" />
+      <div className="card1-image-container">
+        <img className="card1-image" src={image} alt="" />
+      </div>
     </Link>
     <div className="card1-text-container">
       <Link to={`/work/${link}`}>
@@ -22,8 +24,8 @@ export const Card1 = ({
       </Link>
       <p className="card1-description">{description}</p>
       <div className="card1-buttons-container">
-        <Button2 text="VIEW SITE" to={siteLink} />
-        <Button3 text="VIEW CODE" to={githubLink} />
+        <Button2 to={siteLink} />
+        <Button3 to={githubLink} />
       </div>
     </div>
   </div>
