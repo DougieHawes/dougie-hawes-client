@@ -1,31 +1,38 @@
-import { Route1 } from "../../utils/routes";
+import axios from "axios";
+
+import { useState, useEffect } from "react";
 
 import { Card1 } from "../../utils/cards";
 
-import { workArray } from "./data";
-
-import "./style.scss";
-
 const Work = () => {
-  return (
-    <Route1
-      content={
-        <>
-          <div className="work-grid">
-            {workArray.map((w) => (
-              <Card1
-                key={w.id}
-                image={w.imageArray[0]}
-                link={w.id}
-                description={w.description}
-                title={w.title}
-              />
-            ))}
-          </div>
-        </>
+  const [workItems, setWorkItems] = useState([]);
+
+  useEffect(() => {
+    const getWork = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/work");
+
+        setWorkItems(response.data);
+      } catch (error) {
+        console.log(error.message);
       }
-      title="Work"
-    />
+    };
+
+    getWork();
+  }, []);
+
+  return (
+    <div>
+      {workItems.map((w) => (
+        <Card1
+          key={w._id}
+          codeLink={w.codeLink}
+          description={w.description}
+          siteLink={w.siteLink}
+          title={w.title}
+        />
+      ))}
+    </div>
   );
 };
 
