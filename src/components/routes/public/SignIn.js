@@ -1,4 +1,7 @@
+import axios from "axios";
+
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Button1 } from "../../utils/buttons";
 import { Input1 } from "../../utils/inputs";
@@ -11,13 +14,28 @@ const SignIn = () => {
 
   const { username, password } = formData;
 
+  const navigate = useNavigate();
+
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(formData);
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/user/signin",
+        formData
+      );
+
+      setFormData({ username: "", password: "" });
+
+      localStorage.setItem("token", response.data.token);
+
+      navigate(`${process.env.REACT_APP_SIGNIN_URL}/create-work`);
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (

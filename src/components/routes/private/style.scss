@@ -1,1 +1,10 @@
-@import "../../../display/style/style.scss";
+@import "../../../display/style/variables";
+
+// CREATE WORK
+.sign-out {
+  color: $colour4;
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 800;
+  text-align: center;
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Route2 } from "../../utils/routes";
 
@@ -12,6 +13,8 @@ const CreateWork = () => {
 
   const { title } = formData;
 
+  const navigate = useNavigate();
+
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -21,13 +24,26 @@ const CreateWork = () => {
     console.log(formData);
   };
 
+  const handleSignOut = () => {
+    localStorage.removeItem("token");
+
+    navigate("/");
+  };
+
   return (
     <Route2
       content={
         <>
+          <p className="sign-out" onClick={handleSignOut}>
+            SIGN-OUT
+          </p>
           <form className="form">
-            <Input1 value={title} onChange={handleChange} />
-            <Button1 onClick={handleSubmit} />
+            <Input1
+              value={title}
+              onChange={handleChange}
+              placeholder="enter title..."
+            />
+            <Button1 onClick={handleSubmit} text="submit" />
           </form>
         </>
       }
