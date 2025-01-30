@@ -8,7 +8,7 @@ import { Input1 } from "../../utils/inputs";
 import "./style.scss";
 
 const CreateWork = () => {
-  const [formData, setFromData] = useState({ title: "" });
+  const [formData, setFormData] = useState({ title: "" });
 
   const { title } = formData;
 

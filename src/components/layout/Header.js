@@ -20,7 +20,6 @@ const Header = ({ darkmode, onClick }) => {
       <nav className="header-navbar">
         <Link1 to="/work" text="Work" />
         <Link1 to="/skills" text="Skills" />
-        <Link1 to="/blog" text="Blog" />
         <Link1 to="/contact" text="Contact" />
       </nav>
       <ModeToggle darkmode={darkmode} onClick={onClick} />
