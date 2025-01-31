@@ -4,22 +4,15 @@ import { Button2, Button3 } from "./buttons.js";
 
 import "./style.scss";
 
-export const Card1 = ({
-  description,
-  githubLink,
-  image,
-  link,
-  siteLink,
-  title,
-}) => (
+export const Card1 = ({ description, githubLink, image, siteLink, title }) => (
   <div className="card card1">
-    <Link to={`/work/${link}`}>
+    <Link to={`/work/${title}`}>
       <div className="card1-image-container">
         <img className="card1-image" src={image} alt="" />
       </div>
     </Link>
     <div className="card1-text-container">
-      <Link to={`/work/${link}`}>
+      <Link to={`/work/${title}`}>
         <h3 className="card-title">{title}</h3>
       </Link>
       <p className="card1-description">{description}</p>
