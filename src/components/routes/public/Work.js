@@ -21,6 +21,8 @@ const Work = () => {
     getWork();
   }, []);
 
+  console.log(workItems);
+
   return (
     <div>
       {workItems.map((w) => (
@@ -28,6 +30,7 @@ const Work = () => {
           key={w._id}
           codeLink={w.codeLink}
           description={w.description}
+          image={`http://localhost:5000/${w.images[0]}`}
           siteLink={w.siteLink}
           title={w.title}
         />

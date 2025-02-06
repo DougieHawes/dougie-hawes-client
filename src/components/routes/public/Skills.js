@@ -6,8 +6,6 @@ import { Route1 } from "../../utils/routes";
 
 import { Card2 } from "../../utils/cards";
 
-import { skillsArray } from "./data";
-
 import "./style.scss";
 
 const Skills = ({ darkmode }) => {
