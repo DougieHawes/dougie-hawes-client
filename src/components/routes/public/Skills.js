@@ -29,7 +29,7 @@ const Skills = ({ darkmode }) => {
       content={
         <>
           <div className="skills-grid">
-            {skillsArray.map((s) => (
+            {/* {skillsArray.map((s) => (
               <Card2
                 key={s.id}
                 details={s.details}
@@ -38,7 +38,7 @@ const Skills = ({ darkmode }) => {
                 title={s.title}
                 onClick={() => toggleModal(s)}
               />
-            ))}
+            ))} */}
           </div>
           {showModal && (
             <SkillModal
