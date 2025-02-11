@@ -69,36 +69,24 @@ const Home = ({ darkmode }) => {
           </div>
           <div className="home-work-samples-container">
             <div className="home-work-sample">
-              <img
-                className="home-work-sample-image"
-                src={laadeeedaaLogo}
-                alt=""
-              />
+              <img className="home-work-sample-image" alt="" />
               <div className="home-work-sample-text-container">
                 <p className="home-work-sample-category">SITES</p>
-                <p className="home-work-sample-title">LaaDeeDaa</p>
+                <p className="home-work-sample-title"></p>
               </div>
             </div>
             <div className="home-work-sample">
-              <img
-                className="home-work-sample-image"
-                src={laadeeedaaLogo}
-                alt=""
-              />
+              <img className="home-work-sample-image" alt="" />
               <div className="home-work-sample-text-container">
                 <p className="home-work-sample-category">SITES</p>
-                <p className="home-work-sample-title">LaaDeeDaa</p>
+                <p className="home-work-sample-title"></p>
               </div>
             </div>
             <div className="home-work-sample">
-              <img
-                className="home-work-sample-image"
-                src={laadeeedaaLogo}
-                alt=""
-              />
+              <img className="home-work-sample-image" alt="" />
               <div className="home-work-sample-text-container">
                 <p className="home-work-sample-category">SITES</p>
-                <p className="home-work-sample-title">LaaDeeDaa</p>
+                <p className="home-work-sample-title"></p>
               </div>
             </div>
           </div>

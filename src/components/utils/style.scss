@@ -81,6 +81,7 @@
   }
 }
 .card2 {
+  cursor: pointer;
   width: 150px;
   .card2-level {
     color: $colour4;
@@ -155,8 +156,8 @@
     text-transform: uppercase;
   }
   .route-content {
-    min-height: calc(100vh - 106px);
-    max-height: calc(100vh - 106px);
+    min-height: calc(100vh - 125px);
+    max-height: calc(100vh - 125px);
     overflow-x: hidden;
     overflow-y: scroll;
   }
