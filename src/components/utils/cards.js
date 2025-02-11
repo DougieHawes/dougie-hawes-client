@@ -19,7 +19,7 @@ export const Card1 = ({
       </div>
     </Link>
     <div className="card1-text-container">
-      <Link to={`/work/${title}`}>
+      <Link to={`/work/${id}`}>
         <h3 className="card-title">{title}</h3>
       </Link>
       <p
