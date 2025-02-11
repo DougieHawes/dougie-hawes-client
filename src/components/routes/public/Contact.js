@@ -48,6 +48,9 @@ const Contact = ({ darkmode }) => {
     if (!emailValid) {
       setError("please enter a valid email");
     }
+
+    setError("email sent successfully");
+    setFormData({ title: "", body: "", email: "" });
   };
 
   return (
@@ -55,14 +58,22 @@ const Contact = ({ darkmode }) => {
       content={
         <>
           <div className="contact-links-container">
-            <a className="contact-link" target="_blank">
+            <a
+              className="contact-link"
+              href="https://www.linkedin.com/in/dougiehawes/"
+              target="_blank"
+            >
               <img
                 className="contact-link-image"
                 src={darkmode ? linkedinLogoDark : linkedinLogoLight}
                 alt=""
               />
             </a>
-            <a className="contact-link" target="_blank">
+            <a
+              className="contact-link"
+              href="https://github.com/DougieHawes"
+              target="_blank"
+            >
               <img
                 className="contact-link-image"
                 src={darkmode ? githubLogoDark : githubLogoLight}
@@ -72,18 +83,27 @@ const Contact = ({ darkmode }) => {
             <a className="contact-link" target="_blank">
               <img
                 className="contact-link-image"
+                href="tel:+447742148280"
                 src={darkmode ? phoneLogoDark : phoneLogoLight}
                 alt=""
               />
             </a>
-            <a className="contact-link" target="_blank">
+            <a
+              className="contact-link"
+              href="mailto:dougiehawes@hotmail.com"
+              target="_blank"
+            >
               <img
                 className="contact-link-image"
                 src={darkmode ? emailLogoDark : emailLogoLight}
                 alt=""
               />
             </a>
-            <a className="contact-link" target="_blank">
+            <a
+              className="contact-link"
+              href="https://drive.google.com/file/d/18O5aFPLu5i5jR-F7lB_rSOKpxRfZwUEV/view?usp=sharing"
+              target="_blank"
+            >
               <img
                 className="contact-link-image"
                 src={darkmode ? cvLogoDark : cvLogoLight}

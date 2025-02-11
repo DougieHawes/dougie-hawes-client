@@ -35,6 +35,7 @@
   margin-top: 21px;
   max-width: 400px;
   .contact-link {
+    cursor: pointer;
     .contact-link-image {
       width: 60px;
     }
@@ -217,77 +218,56 @@
   display: flex;
   flex-wrap: wrap;
 }
-.work-item-page {
+
+// WORK ITEM
+.work-item {
   display: flex;
   flex-wrap: wrap;
-  .work-item-page-column {
-    display: block;
-    height: auto;
-    padding: 0 6px;
-    max-width: 640px;
-    object-fit: cover;
+  padding-top: 21px;
+  .work-item-column {
+    max-width: 700px;
+    min-width: 300px;
     width: 100%;
-    .work-item-page-title-container {
-      .work-item-page-title {
-        font-family: $font1;
-        font-size: 42px;
-      }
-      .work-item-page-date {
-        color: $colour4;
-        font-size: 21px;
-        margin-top: -14px;
-        font-weight: 800;
-      }
-      .work-item-skills-array {
-        padding: 6px 2%;
-        .work-item-skills-array-item {
-          color: $colour3;
-          cursor: pointer;
-          font-weight: 800;
-        }
-      }
-    }
-    .work-item-image-container {
-      border-width: 2px;
-      margin-right: 6px;
-      max-height: 400px;
-      overflow: hidden;
-      width: 100%;
-      .work-item-image {
-        display: block;
-        height: auto;
-        max-width: 100%;
-        object-fit: cover;
+    .work-item-image {
+      margin-bottom: 7px;
+      .work-item-main-image {
         width: 100%;
       }
     }
-    .work-item-image-scroll-container {
-      display: flex;
-      .work-item-image-scroll-button {
-        background-color: rgba($color: #000000, $alpha: 0);
-        border-width: 2px;
-        font-size: 21px;
+    .work-item-thumbnails {
+      display: grid;
+      grid-gap: 7px;
+      grid-template-columns: repeat(3, 1fr);
+      .work-item-thumbnail {
         cursor: pointer;
-        margin: 6px;
-        padding: 6px;
         width: 100%;
       }
     }
-    .work-item-image-thumbnails {
+    .work-item-title {
+      color: $colour3;
+      font-size: 42px;
+      text-align: center;
+    }
+    .work-item-links {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      .work-item-image-thumbnail {
-        border-width: 2px;
-        margin: 2px;
-        width: 140px;
+      .work-item-link {
+        color: $colour1;
+        font-size: 21px;
+        margin-bottom: 7px;
+        padding: 7px;
+        text-align: center;
+        width: 100%;
+      }
+      .work-item-link-site {
+        background-color: $colour3;
+      }
+      .work-item-link-code {
+        background-color: $colour4;
       }
     }
-    .work-item-links-container {
-      margin-top: 21px;
-    }
-    .work-item-description-container {
-      padding: 6px 0;
+    .work-item-description {
+      font-size: 21px;
       text-align: justify;
     }
   }

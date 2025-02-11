@@ -9,8 +9,6 @@ import nodeLogo from "../../../display/media/images/icons/node-logo.png";
 
 import { Route1 } from "../../utils/routes";
 
-import laadeeedaaLogo from "../../../display/media/images/laadeedaa.png";
-
 import "./style.scss";
 
 const Home = ({ darkmode }) => {

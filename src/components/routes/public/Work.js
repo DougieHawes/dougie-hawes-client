@@ -10,7 +10,9 @@ const Work = () => {
   useEffect(() => {
     const getWork = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/work");
+        const response = await axios.get(
+          `${process.env.REACT_APP_SERVER_URL}/work`
+        );
 
         setWorkItems(response.data);
       } catch (error) {
@@ -21,8 +23,6 @@ const Work = () => {
     getWork();
   }, []);
 
-  console.log(workItems);
-
   return (
     <div>
       {workItems.map((w) => (
@@ -30,7 +30,8 @@ const Work = () => {
           key={w._id}
           codeLink={w.codeLink}
           description={w.description}
-          image={`http://localhost:5000/${w.images[0]}`}
+          id={w._id}
+          // image={`${process.env.REACT_APP_SERVER_URL}/${w.images[0]}`}
           siteLink={w.siteLink}
           title={w.title}
         />
