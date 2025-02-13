@@ -111,9 +111,10 @@ const Contact = ({ darkmode }) => {
           <div className="contact-form-container">
             <p className="contact-form-greet">
               Want my help? Want to collaborate? Whatever the reason, please
-              contact me via the form below
+              contact me.
+              {/* via the form below */}
             </p>
-            <div className="contact-form-error-container">{error}</div>
+            {/* <div className="contact-form-error-container">{error}</div>
             <form className="contact-form" onSubmit={handleSubmit}>
               <Input1
                 name="title"
@@ -134,7 +135,7 @@ const Contact = ({ darkmode }) => {
                 value={email}
               />
               <Button1 text="SEND" />
-            </form>
+            </form> */}
           </div>
         </>
       }

@@ -39,7 +39,7 @@ const Work = () => {
             description={item.description}
             githubLink={item.githubLink}
             id={item._id}
-            image={item.image1}
+            image={`${process.env.REACT_APP_SERVER_URL}${item.image1}`}
             setLink={item.setLink}
             title={item.title}
           />
@@ -50,15 +50,3 @@ const Work = () => {
 };
 
 export default Work;
-
-// {workItems.map((w) => (
-//   <Card1
-//     key={w._id}
-//     codeLink={w.codeLink}
-//     description={w.description}
-//     id={w._id}
-//     // image={`${process.env.REACT_APP_SERVER_URL}/${w.images[0]}`}
-//     siteLink={w.siteLink}
-//     title={w.title}
-//   />
-// ))}

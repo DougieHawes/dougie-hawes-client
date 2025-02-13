@@ -53,13 +53,22 @@
   }
   .card1-image-container {
     border-width: 2px;
-    transition: 0.2s border-color ease-in-out;
+    max-height: 140px;
+    overflow: hidden;
     .card1-image {
+      margin-left: 0;
+      margin-top: 0;
+      transition: 0.3s width ease-in-out, 0.3s margin-left ease-in-out,
+        0.3s margin-top ease-in-out;
       width: 100%;
     }
   }
   .card1-image-container:hover {
-    border-color: $colour1;
+    .card1-image {
+      margin-left: -5%;
+      margin-top: -5%;
+      width: 110%;
+    }
   }
   .card1-text-container {
     margin-top: -6px;
