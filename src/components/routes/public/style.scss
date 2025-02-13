@@ -250,19 +250,23 @@
       margin-bottom: 7px;
       position: relative;
       .work-item-toggle {
+        background-color: $colour4;
+        border-radius: 50%;
         cursor: pointer;
         font-size: 42px;
         position: absolute;
         top: 42%;
       }
       .work-item-toggle-left {
-        left: 0;
+        left: 1%;
       }
       .work-item-main-image {
+        aspect-ratio: 20 / 9;
+        border-width: 2px;
         width: 100%;
       }
       .work-item-toggle-right {
-        right: 0;
+        right: 1%;
       }
     }
     .work-item-thumbnails {

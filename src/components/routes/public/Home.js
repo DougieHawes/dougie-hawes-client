@@ -1,3 +1,7 @@
+import axios from "axios";
+
+import { useEffect, useState } from "react";
+
 import mernLogo from "../../../display/media/images/icons/mongodb-logo.png";
 import expressLogo from "../../../display/media/images/icons/express-logo.png";
 import githubLogoDark from "../../../display/media/images/icons/github-logo-dark.svg";
@@ -12,6 +16,49 @@ import { Route1 } from "../../utils/routes";
 import "./style.scss";
 
 const Home = ({ darkmode }) => {
+  const [randomItems, setRandomItems] = useState({});
+
+  useEffect(() => {
+    const getWork = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_SERVER_URL}/work`
+        );
+
+        const sitesArray = [];
+        const appsArray = [];
+        const gamesArray = [];
+
+        response.data.map((w) => {
+          if (w.category == "sites") {
+            sitesArray.push(w);
+          } else if (w.category == "apps") {
+            appsArray.push(w);
+          } else {
+            gamesArray.push(w);
+          }
+        });
+
+        const randomSite =
+          sitesArray[Math.floor(Math.random() * sitesArray.length)];
+        const randomApp =
+          appsArray[Math.floor(Math.random() * appsArray.length)];
+        const randomGame =
+          gamesArray[Math.floor(Math.random() * gamesArray.length)];
+
+        setRandomItems({
+          site: { title: randomSite.title, image: randomSite.image1 },
+          app: { title: randomApp.title, image: randomApp.image1 },
+          game: { title: randomGame.title, image: randomGame.image1 },
+        });
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+
+    getWork();
+  }, []);
+  console.log(randomItems);
   return (
     <Route1
       content={
@@ -76,15 +123,19 @@ const Home = ({ darkmode }) => {
             <div className="home-work-sample">
               <img className="home-work-sample-image" alt="" />
               <div className="home-work-sample-text-container">
-                <p className="home-work-sample-category">SITES</p>
-                <p className="home-work-sample-title"></p>
+                <p className="home-work-sample-category">APPS</p>
+                <p className="home-work-sample-title">
+                  {/* {randomItems.app.title} */}
+                </p>
               </div>
             </div>
             <div className="home-work-sample">
               <img className="home-work-sample-image" alt="" />
               <div className="home-work-sample-text-container">
-                <p className="home-work-sample-category">SITES</p>
-                <p className="home-work-sample-title"></p>
+                <p className="home-work-sample-category">GAMES</p>
+                <p className="home-work-sample-title">
+                  {/* {randomItems.game.title} */}
+                </p>
               </div>
             </div>
           </div>
