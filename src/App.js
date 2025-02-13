@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 
 import Home from "./components/routes/public/Home";
 import Contact from "./components/routes/public/Contact";
+import CurriculumVitae from "./components/routes/public/CurriculumVitae";
 import Work from "./components/routes/public/Work";
 import WorkItem from "./components/routes/public/WorkItem";
 import Skills from "./components/routes/public/Skills";
@@ -23,6 +24,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home darkmode={darkmode} />} />
         <Route path="/contact" element={<Contact darkmode={darkmode} />} />
+        <Route path="/curriculumvitae" element={<CurriculumVitae />} />
         <Route path="/skills" element={<Skills darkmode={darkmode} />} />
         <Route path="/work" element={<Work />} />
         <Route
@@ -30,7 +32,6 @@ const App = () => {
           element={<WorkItem darkmode={darkmode} />}
         />
         <Route path={process.env.REACT_APP_SIGNIN_URL} element={<SignIn />} />
-
         <Route
           path={`${process.env.REACT_APP_SIGNIN_URL}/create-work`}
           element={<CreateWork />}

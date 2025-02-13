@@ -17,6 +17,7 @@ import { Button1 } from "../../utils/buttons";
 import { Input1, Input2 } from "../../utils/inputs";
 
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 const Contact = ({ darkmode }) => {
   const [formData, setFormData] = useState({ title: "", body: "", email: "" });
@@ -99,17 +100,13 @@ const Contact = ({ darkmode }) => {
                 alt=""
               />
             </a>
-            <a
-              className="contact-link"
-              href="https://drive.google.com/file/d/18O5aFPLu5i5jR-F7lB_rSOKpxRfZwUEV/view?usp=sharing"
-              target="_blank"
-            >
+            <Link className="contact-link" to="/curriculumvitae">
               <img
                 className="contact-link-image"
                 src={darkmode ? cvLogoDark : cvLogoLight}
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className="contact-form-container">
             <p className="contact-form-greet">

@@ -55,6 +55,17 @@
   }
 }
 
+// CURRICULUM VITAE
+.curriculum-vitae {
+  text-align: center;
+  .curriculum-vitae-link {
+    color: $colour4;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 7px;
+  }
+}
+
 // HOME
 .home-links-container {
   margin: 21px auto 0 auto;
@@ -231,6 +242,7 @@
   flex-wrap: wrap;
   padding: 0 1%;
   .work-item-column {
+    margin-top: 21px;
     max-width: 650px;
     min-width: 300px;
     width: 100%;
