@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 import { Card1 } from "../../utils/cards";
+import { Route1 } from "../../utils/routes";
 
 const Work = () => {
   const [workItems, setWorkItems] = useState([]);
@@ -29,23 +30,28 @@ const Work = () => {
   }, []);
 
   return (
-    <div>
-      {loading && <p>Loading work items...</p>}
-      {error && <p className="error">{error}</p>}
-      <div className="work-grid">
-        {workItems.map((item) => (
-          <Card1
-            key={item._id}
-            description={item.description}
-            githubLink={item.githubLink}
-            id={item._id}
-            image={`${process.env.REACT_APP_SERVER_URL}${item.image1}`}
-            setLink={item.setLink}
-            title={item.title}
-          />
-        ))}
-      </div>
-    </div>
+    <Route1
+      content={
+        <div>
+          {loading && <p>Loading work items...</p>}
+          {error && <p className="error">{error}</p>}
+          <div className="work-grid">
+            {workItems.map((item) => (
+              <Card1
+                key={item._id}
+                description={item.description}
+                githubLink={item.codeLink}
+                id={item._id}
+                image={`${process.env.REACT_APP_SERVER_URL}${item.image1}`}
+                siteLink={item.siteLink}
+                title={item.title}
+              />
+            ))}
+          </div>
+        </div>
+      }
+      title="work"
+    />
   );
 };
 
