@@ -91,17 +91,21 @@
 .card2 {
   cursor: pointer;
   width: 150px;
+  .card-image-container {
+    margin-top: 14px;
+    min-height: 120px;
+    .card2-image {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+    }
+  }
   .card2-level {
     color: $colour4;
     font-size: 21px;
     font-weight: bold;
     margin-top: -7px;
     text-align: center;
-  }
-  .card2-image {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
   }
 }
 .card3 {

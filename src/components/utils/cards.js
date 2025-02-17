@@ -37,7 +37,9 @@ export const Card1 = ({
 export const Card2 = ({ image, level, onClick, title }) => (
   <div className="card card2" onClick={onClick}>
     <h3 className="card-title">{title}</h3>
-    <img className="card2-image" src={image} alt="" />
+    <div className="card-image-container">
+      <img className="card2-image" src={image} alt="" />
+    </div>
     <p className="card2-level">{level}</p>
   </div>
 );
