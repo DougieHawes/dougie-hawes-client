@@ -61,7 +61,7 @@ const Contact = ({ darkmode }) => {
           <div className="contact-links-container">
             <a
               className="contact-link"
-              href="https://www.linkedin.com/in/dougiehawes/"
+              href="https://www.linkedin.com/in/dougie-hawes-9b842a353/"
               target="_blank"
             >
               <img
