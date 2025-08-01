@@ -1,0 +1,35 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font1;
+}
+
+.app {
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.app-darkmode {
+  background-color: $colour1;
+  * {
+    color: $colour2;
+  }
+}
+
+.app-lightmode {
+  background-color: $colour2;
+  * {
+    color: $colour1;
+  }
+}

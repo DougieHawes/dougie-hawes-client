@@ -1,0 +1,23 @@
+@import "../../display/style/variables";
+
+.darkmode-toggle {
+  bottom: $y-padding;
+  cursor: pointer;
+  font-size: 42px;
+  position: absolute;
+  right: $x-padding;
+}
+
+.header {
+  border-bottom: 2px solid $colour3;
+  height: $header-height;
+  .header-title-container {
+    padding-left: $x-padding;
+    .header-title {
+      .header-initial {
+        color: $colour4;
+        font-size: 42px;
+      }
+    }
+  }
+}
